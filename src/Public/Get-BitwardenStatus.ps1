@@ -26,9 +26,15 @@
 
     PROCESS
     {
+        $webRequestSplatParameters = @{
+            Method          = "Get";
+            Uri             = $requestUri;
+            UseBasicParsing = $true
+        }
+
         try
         {
-            $webRequestResult = Invoke-WebRequest -Method Get -Uri $requestUri -UseBasicParsing -ErrorAction Stop
+            $webRequestResult = Invoke-WebRequest @webRequestSplatParameters -ErrorAction Stop
         }
         catch
         {
