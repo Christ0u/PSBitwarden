@@ -2,8 +2,8 @@ function Get-BitwardenItem
 {
     [cmdletbinding(DefaultParameterSetName = "GetItemByFilter")]
     Param(
-        # Parameter help description
-        [Parameter(Mandatory = $true, ParameterSetName = "GetItemById", HelpMessage = "Unique identifier of the item to retrieve")]
+        # Item Id
+        [Parameter(Mandatory = $true, ParameterSetName = "GetItemById", HelpMessage = "The unique identifier of the item to retrieve")]
         [ValidateScript({
                 $_ -is [guid] -or ($_ -is [string] -and -not [string]::IsNullOrWhiteSpace($_))
             })]
@@ -31,6 +31,8 @@ function Get-BitwardenItem
 
         if ($PSCmdlet.ParameterSetName -eq "GetItemById")
         {
+            $itemId = $null
+
             if ($Id -is [guid])
             {
                 $itemId = $Id.Guid
