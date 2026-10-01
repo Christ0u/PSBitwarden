@@ -1,4 +1,4 @@
-function Lock-BitwardenVault
+﻿function Lock-BitwardenVault
 {
     [cmdletbinding()]
     Param(

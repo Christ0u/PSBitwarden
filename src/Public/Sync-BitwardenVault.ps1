@@ -1,4 +1,4 @@
-function Sync-BitwardenVault
+﻿function Sync-BitwardenVault
 {
     [cmdletbinding()]
     Param(

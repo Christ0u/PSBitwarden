@@ -1,4 +1,4 @@
-function Get-BitwardenItem
+﻿function Get-BitwardenItem
 {
     [cmdletbinding(DefaultParameterSetName = "GetItemByFilter")]
     Param(

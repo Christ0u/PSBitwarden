@@ -1,4 +1,4 @@
-function Get-BitwardenFingerprint
+﻿function Get-BitwardenFingerprint
 {
     [cmdletbinding()]
     Param(

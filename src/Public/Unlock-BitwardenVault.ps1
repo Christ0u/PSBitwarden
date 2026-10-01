@@ -1,4 +1,4 @@
-function Unlock-BitwardenVault
+﻿function Unlock-BitwardenVault
 {
     [cmdletbinding()]
     Param(
